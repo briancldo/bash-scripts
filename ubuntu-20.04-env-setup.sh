@@ -58,6 +58,14 @@ brew tap aws/tap
 brew install aws-sam-cli
 sam --version &&echo 'Sucessfully installed AWS SAM' || echo 'Failed installing AWS SAM'
 
+# pip, nodejs
+sudo apt install python3-pip -y
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm install 12.16.3
+
+
 echo "'Packages' section complete. Note the installation results, and don't forget to reboot"
 
 
